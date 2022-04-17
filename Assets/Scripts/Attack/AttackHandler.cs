@@ -6,20 +6,11 @@ namespace Attack
 {
     public class AttackHandler : MonoBehaviour
     {
-        private void OnTriggerEnter2D(Collider2D col)
+        public async void GetDamage()
         {
-            if (col.gameObject.TryGetComponent(out AttackPlace attackPlace))
-            {
-                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            }
-        }
-        
-        private void OnTriggerExit2D(Collider2D col)
-        {
-            if (col.gameObject.TryGetComponent(out AttackPlace attackPlace))
-            {
-                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            }
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            await Task.Delay(100);
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 }
