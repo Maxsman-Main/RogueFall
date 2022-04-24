@@ -14,6 +14,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _attackActor = GetComponent<AttackActor>();
-        _attackActor.SetAttackBehavior(new MeleeAttack(_attackPlace, 0.5f));
+        _attackActor.SetAttackBehavior(new MeleeAttack(_attackPlace, 0.1f));
     }
 }
