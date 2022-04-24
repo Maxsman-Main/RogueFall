@@ -18,19 +18,30 @@ namespace Attack
         
         public void Attack()
         {
-            AttackWithDelay(100);
+            if (_attackPlace != null)
+            {
+                AttackWithDelay(100);
+            }
         }
 
         private async void AttackWithDelay(int attackDelay)
         {
-            Collider2D[] enemies = Physics2D.OverlapCircleAll(_attackPlace.transform.position, _attackRadius, 1 <<_damagedLayer);
+            Collider2D[] enemies =
+                Physics2D.OverlapCircleAll(_attackPlace.transform.position, _attackRadius, 1 << _damagedLayer);
             _attackPlace.gameObject.SetActive(true);
             foreach (var enemy in enemies)
             {
-                enemy.GetComponent<AttackHandler>().GetDamage();
+                if (enemy.isTrigger == false)
+                {
+                    enemy.GetComponent<AttackHandler>().GetDamage();
+                }
             }
+
             await Task.Delay(attackDelay);
-            _attackPlace.gameObject.SetActive(false);
+            if (_attackPlace != null)
+            {
+                _attackPlace.gameObject.SetActive(false);
+            }
         }
     }
 }

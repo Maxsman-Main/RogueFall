@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -8,9 +7,12 @@ namespace Attack
     {
         public async void GetDamage()
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            await Task.Delay(100);
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            if (gameObject.GetComponent<Sprite>() != null)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                await Task.Delay(100);
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 }
