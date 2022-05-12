@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6901984b4b2135c428a2a9a6d78b4555
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - skillLockedMaterial: {fileID: 2100000, guid: 73d448ce0b0b9104890f658497fd9118, type: 2}
+  - skillUnlockableMaterial: {fileID: 2100000, guid: 44c0b19960afb7043bd215538c902afb, type: 2}
+  - lineSprite: {fileID: 21300000, guid: ba3ef70ace382e44ab54813f65789182, type: 3}
+  - lineGlowSprite: {fileID: 21300000, guid: 7f738080b1950404c879eb6033242d48, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

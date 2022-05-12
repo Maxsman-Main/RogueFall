@@ -9,7 +9,6 @@ namespace Move
 
         private Mover _mover;
         private Jumper _jumper;
-
         private void Start()
         {
             _mover = new Mover();
