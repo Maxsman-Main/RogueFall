@@ -6,6 +6,7 @@ namespace Attack
     public class Ammo : MonoBehaviour
     {
         [SerializeField] private float _speed;
+        [SerializeField] private int _damage;
 
         private void FixedUpdate()
         {
@@ -17,9 +18,14 @@ namespace Attack
             var target = col.gameObject.GetComponent<AttackHandler>();
             if (target != null)
             {
-                target.GetDamage();
+                target.GetDamage(_damage);
             }
             Destroy(gameObject);
+        }
+
+        public void SetDirection(float direction)
+        {
+            _speed *= direction;
         }
     }
 }

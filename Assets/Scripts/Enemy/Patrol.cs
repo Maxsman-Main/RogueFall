@@ -45,7 +45,7 @@ namespace Enemy
 
             if (_actor.IsFoundEnemy)
             {
-                _actor.ChangeState(new Anger(_actor, _actor.AttackBehavior));
+                _actor.ChangeState(new Anger(_actor, _actor.AttackBehavior, _actor.Target)); 
             }
         }
 

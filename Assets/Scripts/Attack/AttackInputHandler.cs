@@ -5,7 +5,7 @@ namespace Attack
     public class AttackInputHandler : MonoBehaviour
     {
         [SerializeField] private AttackActor _attackActor;
-
+        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.J))
@@ -13,6 +13,5 @@ namespace Attack
                 _attackActor.Attack();
             }
         }
-        
     }
 }

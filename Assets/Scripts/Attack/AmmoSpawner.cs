@@ -7,9 +7,10 @@ namespace Attack
     {
         [SerializeField] private GameObject _ammo;
         
-        public void Spawn()
+        public void Spawn(Transform localScale)
         {
-            Instantiate(_ammo, gameObject.transform.position, Quaternion.identity);
+            var ammo = Instantiate(_ammo, gameObject.transform.position, Quaternion.identity);
+            ammo.GetComponent<Ammo>().SetDirection(localScale.localScale.x);
         }
     }
 }

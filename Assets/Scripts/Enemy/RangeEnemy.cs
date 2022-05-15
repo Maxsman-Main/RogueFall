@@ -9,7 +9,7 @@ namespace Enemy
         
         private void Start()
         {
-            SetBehavior(new RangeAttack(_spawner));
+            SetBehavior(new RangeAttack(_spawner, gameObject.transform));
             ChangeState(new Patrol(this));
         }
     }

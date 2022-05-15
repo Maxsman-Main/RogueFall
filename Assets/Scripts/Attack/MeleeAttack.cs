@@ -8,14 +8,16 @@ namespace Attack
         private readonly AttackPlace _attackPlace;
         private readonly float _attackRadius;
         private readonly LayerMask _damagedLayer;
-        
-        public MeleeAttack(AttackPlace attackPlace, float attackRadius)
+        private readonly float _damage;
+
+        public MeleeAttack(AttackPlace attackPlace, float attackRadius, float damage)
         {
             _attackPlace = attackPlace;
             _attackRadius = attackRadius;
             _damagedLayer = LayerMask.NameToLayer("Enemy");
+            _damage = damage;
         }
-        
+
         public void Attack()
         {
             if (_attackPlace != null)
@@ -33,7 +35,11 @@ namespace Attack
             {
                 if (enemy.isTrigger == false)
                 {
-                    enemy.GetComponent<AttackHandler>().GetDamage();
+                    var attackHandler = enemy.GetComponent<AttackHandler>();
+                    if (attackHandler != null)
+                    {
+                        attackHandler.GetDamage(_damage);
+                    }
                 }
             }
 
