@@ -41,6 +41,7 @@ namespace Enemy
             if (col.gameObject.TryGetComponent(out Player player))
             {
                 _isFoundEnemy = true;
+                _target = col.gameObject;
             }
         }
 
