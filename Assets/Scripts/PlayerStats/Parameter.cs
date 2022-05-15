@@ -7,7 +7,7 @@ namespace PlayerStats
         private double _price;
         private string _name;
         private double _value;
-        private int _level = 1;
+        private int _level = 0;
         
         public event Action<Parameter> OnUpgraded;
         

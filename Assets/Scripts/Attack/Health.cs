@@ -16,10 +16,16 @@ namespace Attack
             OnHealthChanged?.Invoke(_value);
         }
 
+        public void UpHealth(float healthValue)
+        {
+            _value += healthValue;
+            OnHealthChanged?.Invoke(_value);
+        }
+
         public void SetHealth(Parameter parameter)
         {
             _value = (float)parameter.Value;
-            OnHealthChanged?.Invoke(_value);
+            OnHealthChanged?.Invoke((float)parameter.Value);
         }
     }
 }

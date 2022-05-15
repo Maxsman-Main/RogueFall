@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private AttackActor _attackActor;
     private Health _health;
     private Cash _cash;
+
+    public PlayerParameters Parameters => _parameters;
     
     private void Start()
     {

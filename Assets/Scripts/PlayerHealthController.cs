@@ -1,4 +1,7 @@
 using Attack;
+using PlayerStats;
+using TMPro;
+using UI;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -8,22 +11,25 @@ namespace DefaultNamespace
         [SerializeField] private Player _player;
         [SerializeField] private Transform _homePoint;
         [SerializeField] private GameObject _homeUI;
-
+        
         private Health _health;
-
-        private void Start()
+        private PlayerParameters _parameters;
+        
+        private void Awake()
         {
-            _health = _player.gameObject.GetComponent<Health>();
+            _health = _player.GetComponent<Health>();
             _health.OnHealthChanged += Die;
+            _parameters = _player.Parameters;
         }
         
         private void Die(float health)
         {
             if (health <= 0)
             {
-                _homeUI.SetActive(true);
                 _player.transform.position = _homePoint.position;
                 GameState.ChangeState(PlayerState.InHome);
+                _health.SetHealth(_parameters.Items[0]);
+                _homeUI.SetActive(true);
             }
         }
     }
