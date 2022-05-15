@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Attack
@@ -5,12 +6,15 @@ namespace Attack
     public class AttackInputHandler : MonoBehaviour
     {
         [SerializeField] private AttackActor _attackActor;
-        
+
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.J))
+            if (GameState.State == PlayerState.InRun)
             {
-                _attackActor.Attack();
+                if (Input.GetKeyDown(KeyCode.J))
+                {
+                    _attackActor.Attack();
+                }
             }
         }
     }

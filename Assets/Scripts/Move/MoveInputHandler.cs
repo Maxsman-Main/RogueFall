@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Move
@@ -18,17 +19,21 @@ namespace Move
 
         private void FixedUpdate()
         {
-            if (Input.GetKey(KeyCode.D))
+            if (GameState.State == PlayerState.InRun)
             {
-                _mover.Move(Direction.Right, _movableActor);
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                _mover.Move(Direction.Left, _movableActor);
-            }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _jumper.Jump(_jumpingActor);
+                if (Input.GetKey(KeyCode.D))
+                {
+                    _mover.Move(Direction.Right, _movableActor);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    _mover.Move(Direction.Left, _movableActor);
+                }
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    _jumper.Jump(_jumpingActor);
+                }
             }
         }
     }
