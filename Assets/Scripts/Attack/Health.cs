@@ -1,4 +1,5 @@
 using System;
+using PlayerStats;
 using UnityEngine;
 
 namespace Attack
@@ -12,6 +13,12 @@ namespace Attack
         public void GetDamage(float damageValue)
         {
             _value -= damageValue;
+            OnHealthChanged?.Invoke(_value);
+        }
+
+        public void SetHealth(Parameter parameter)
+        {
+            _value = (float)parameter.Value;
             OnHealthChanged?.Invoke(_value);
         }
     }

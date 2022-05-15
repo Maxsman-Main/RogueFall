@@ -25,7 +25,6 @@ namespace Attack
                 Physics2D.OverlapCircleAll(_attackPlace.transform.position, _attackRadius, 1 << _damagedLayer);
             foreach (var enemy in enemies)
             {
-                Debug.Log(1);
                 if (enemy.isTrigger == false)
                 {
                     _cash.GetCash(_cashValue);

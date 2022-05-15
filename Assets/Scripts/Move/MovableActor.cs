@@ -1,3 +1,4 @@
+using PlayerStats;
 using UnityEngine;
 
 namespace Move
@@ -9,5 +10,10 @@ namespace Move
     
         public float Speed => _speed;
         public Rigidbody2D RigidBody => GetComponent<Rigidbody2D>();
+
+        public void SetSpeed(Parameter parameter)
+        {
+            _speed = (float)parameter.Value;
+        }
     }
 }

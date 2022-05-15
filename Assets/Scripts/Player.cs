@@ -1,5 +1,6 @@
 using Attack;
 using Move;
+using PlayerStats;
 using UI;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private HealthView _healthView;
     [SerializeField] private float _cashValuePower;
     [SerializeField] private CashView _cashView;
+    [SerializeField] private PlayerParameters _parameters;
     
     private AttackActor _attackActor;
     private Health _health;
@@ -29,5 +31,19 @@ public class Player : MonoBehaviour
         _health = gameObject.GetComponent<Health>();
         _health.OnHealthChanged += _healthView.ChangeHealthView;
         _cash.OnCashChanged += _cashView.ChangeCashView;
+        SetParameters();
+    }
+
+    private void SetParameters()
+    {
+        _parameters.Items[0].OnUpgraded += _health.SetHealth;
+        _parameters.Items[1].OnUpgraded += SetCashPower;
+        _parameters.Items[2].OnUpgraded += gameObject.GetComponent<MovableActor>().SetSpeed;
+    }
+
+    private void SetCashPower(Parameter parameter)
+    {
+        _cashValuePower = (float)parameter.Value;
+        _attackActor.SetCashUpdater(new CashUpdater(_attackPlace, 0.1f, _cashValuePower, _cash));
     }
 }
