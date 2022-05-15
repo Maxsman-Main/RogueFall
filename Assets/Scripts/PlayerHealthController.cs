@@ -18,10 +18,14 @@ namespace DefaultNamespace
         private void Awake()
         {
             _health = _player.GetComponent<Health>();
-            _health.OnHealthChanged += Die;
             _parameters = _player.Parameters;
         }
-        
+
+        private void Update()
+        {
+            Die(_health.Value);
+        }
+
         private void Die(float health)
         {
             if (health <= 0)

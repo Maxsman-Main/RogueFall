@@ -8,6 +8,8 @@ namespace Attack
     {
         [SerializeField] private float _value;
 
+        public float Value => _value;
+
         public event Action<float> OnHealthChanged;
         
         public void GetDamage(float damageValue)
@@ -25,7 +27,7 @@ namespace Attack
         public void SetHealth(Parameter parameter)
         {
             _value = (float)parameter.Value;
-            OnHealthChanged?.Invoke((float)parameter.Value);
+            OnHealthChanged?.Invoke(_value);
         }
     }
 }

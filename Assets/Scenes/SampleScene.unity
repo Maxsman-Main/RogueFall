@@ -2560,7 +2560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0417\u0434\u043E\u0440\u043E\u0432\u044C\u0435: 10"
+  m_text: "\u0417\u0434\u043E\u0440\u043E\u0432\u044C\u0435: 5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4680,7 +4680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 590896191309714826, guid: 46f3ed167d8e49841a1c74668c77f3fd, type: 3}
       propertyPath: _damage
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 590896191309714826, guid: 46f3ed167d8e49841a1c74668c77f3fd, type: 3}
       propertyPath: _points.Array.size
