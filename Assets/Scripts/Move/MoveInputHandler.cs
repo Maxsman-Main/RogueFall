@@ -7,6 +7,7 @@ namespace Move
     {
         [SerializeField] private MovableActor _movableActor;
         [SerializeField] private JumpingActor _jumpingActor;
+        public Animator animator;
 
         private Mover _mover;
         private Jumper _jumper;
@@ -21,6 +22,7 @@ namespace Move
         {
             if (GameState.State == PlayerState.InRun)
             {
+                animator.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
                 if (Input.GetKey(KeyCode.D))
                 {
                     _mover.Move(Direction.Right, _movableActor);
@@ -33,6 +35,7 @@ namespace Move
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     _jumper.Jump(_jumpingActor);
+                    animator.SetBool("IsJumping", _jumpingActor.IsGrounded);
                 }
             }
         }

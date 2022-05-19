@@ -20,6 +20,7 @@ namespace Move
 
         private Vector2 MakeMoveVector(Direction direction, float speed)
         {
+            
             if (direction == Direction.Left)
             {
                 return new Vector2(-speed, 0);
@@ -29,7 +30,6 @@ namespace Move
             {
                 return new Vector2(speed, 0);
             }
-
             return Vector2.zero;
         }
 
