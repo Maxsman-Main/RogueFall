@@ -37,15 +37,15 @@ namespace Move
         {
             if (direction == Direction.Left)
             {
-                return new Vector3(-1, 1, 1);
+                return new Vector3(-10, 10, 10);
             }
 
             if (direction == Direction.Right)
             {
-                return new Vector3(1, 1, 1);
+                return new Vector3(10, 10, 10);
             }
 
-            return new Vector3(1, 1, 1);
+            return new Vector3(10, 10, 10);
         }
     }
 }
