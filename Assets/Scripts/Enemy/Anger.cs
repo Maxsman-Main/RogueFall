@@ -37,7 +37,6 @@ namespace Enemy
 
             if (_target != null)
             {
-                Debug.Log(_actor.Side);
                 if (_target.transform.position.x > _actor.transform.position.x && _actor.Side == Side.Left)
                 {
                     _actor.Rotate();

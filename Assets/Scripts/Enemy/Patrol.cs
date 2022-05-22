@@ -29,8 +29,8 @@ namespace Enemy
             _actorTransform.position = Vector3.MoveTowards(_actorTransform.position, 
                 _nextPoint.transform.position,
                 _actor.Speed * Time.deltaTime);
-
-            if (Vector2.Distance(_actorTransform.position, _nextPoint.transform.position) < 0.2f)
+            
+                if (Vector2.Distance(_actorTransform.position, _nextPoint.transform.position) < 0.2f)
             {
                 if (_waitTime > 0)
                 {
@@ -40,6 +40,14 @@ namespace Enemy
                 {
                     _waitTime = 3f;
                     _nextPoint = _nextPoint = _actor.Points[GetRandomIndex(0, _actor.Points.Count - 1)];
+                    if (_actor.transform.position.x > _nextPoint.transform.position.x && _actor.Side == Side.Right)
+                    {
+                        _actor.Rotate();
+                    }
+                    else if (_actor.transform.position.x < _nextPoint.transform.position.x && _actor.Side == Side.Left)
+                    {
+                        _actor.Rotate();
+                    }
                 }
             }
 

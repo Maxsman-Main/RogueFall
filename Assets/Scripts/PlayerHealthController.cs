@@ -11,6 +11,7 @@ namespace DefaultNamespace
         [SerializeField] private Player _player;
         [SerializeField] private Transform _homePoint;
         [SerializeField] private GameObject _homeUI;
+        [SerializeField] private LevelMaker _maker;
         
         private Health _health;
         private PlayerParameters _parameters;
@@ -34,6 +35,7 @@ namespace DefaultNamespace
                 GameState.ChangeState(PlayerState.InHome);
                 _health.SetHealth(_parameters.Items[0]);
                 _homeUI.SetActive(true);
+                _maker.DestroyLevel();
             }
         }
     }
