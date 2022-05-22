@@ -15,6 +15,6 @@ public class LevelMaker : MonoBehaviour
 
     public void DestroyLevel()
     {
-        Destroy(_level);
+        Destroy(_level.gameObject);
     }
 }
