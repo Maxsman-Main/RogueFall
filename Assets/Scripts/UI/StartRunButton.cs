@@ -16,7 +16,7 @@ namespace UI
             GameState.ChangeState(PlayerState.InRun);
             _homeUI.SetActive(false);
             _startPosition = _maker.Level.StartPosition;
-            _player.transform.position = _startPosition.position;
+            _player.TranslatePlayer(_startPosition);
         }
     }
 }

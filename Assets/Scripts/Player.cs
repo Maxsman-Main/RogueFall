@@ -36,6 +36,11 @@ public class Player : MonoBehaviour
         SetParameters();
     }
 
+    public void TranslatePlayer(Transform point)
+    {
+        gameObject.transform.position = point.position;
+    }
+
     private void SetParameters()
     {
         _parameters.Items[0].OnUpgraded += _health.SetHealth;
