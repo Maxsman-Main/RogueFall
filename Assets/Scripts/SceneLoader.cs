@@ -16,4 +16,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: 0);
     }
+
+    public void OpenTips()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 2);
+    }
 }

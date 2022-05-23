@@ -7379,7 +7379,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1145242063455276757, guid: 10a300acf7683b7409b709103964dd7c, type: 3}
+      - m_Target: {fileID: 458378348}
         m_TargetAssemblyTypeName: LevelMaker, Assembly-CSharp
         m_MethodName: MakeLevel
         m_Mode: 1
