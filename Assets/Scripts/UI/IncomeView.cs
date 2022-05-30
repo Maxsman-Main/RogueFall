@@ -1,5 +1,6 @@
 using System.Globalization;
 using Buildings;
+using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 
@@ -10,8 +11,8 @@ namespace UI
         [SerializeField] private Income _income;
         [SerializeField] private PlayerBuildings _buildings;
         [SerializeField] private TMP_Text _incomeView;
-
-        private void Awake()
+        
+        private void Start()
         {
             foreach (var building in _buildings.Items)
             {
@@ -21,7 +22,7 @@ namespace UI
 
         private void UpdateIncomeView(Building building)
         {
-            _incomeView.text = "Доход: " + _income.Value.ToString(CultureInfo.InvariantCulture) + "c";
+            _incomeView.text = "Доход: " + _income.Value.ToString() + "c";
         }
     }
 }

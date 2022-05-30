@@ -1,4 +1,5 @@
 using Attack;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace PlayerStats
@@ -7,6 +8,7 @@ namespace PlayerStats
     {
         [SerializeField] private PlayerParameters _parameters;
         [SerializeField] private Cash _cash;
+        [SerializeField] private PlayerData _data;
         
         public bool BuyParameter(int id)
         {
@@ -14,6 +16,7 @@ namespace PlayerStats
             {
                 _cash.ReduceCash((float)_parameters.Items[id].Price);
                 _parameters.Items[id].Upgrade();
+                _data.Parameters[id] += 1;
                 return true;
             }
             else

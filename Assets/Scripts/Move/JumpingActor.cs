@@ -20,7 +20,10 @@ namespace Move
     
         private void OnCollisionEnter2D(Collision2D col)
         {
-            _isGrounded = true;
+            if (!col.gameObject.TryGetComponent(out Player player))
+            {
+                _isGrounded = true;
+            }
         }
     }
 }

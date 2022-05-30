@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Buildings
@@ -5,7 +6,6 @@ namespace Buildings
     public class Income : MonoBehaviour
     {
         [SerializeField] private PlayerBuildings _buildings;
-
         public double Value => CalculateIncome();
         
         private double CalculateIncome()

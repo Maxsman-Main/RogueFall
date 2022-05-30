@@ -1,3 +1,4 @@
+using System;
 using DefaultNamespace;
 using UnityEngine;
 
@@ -31,12 +32,15 @@ namespace Move
                 {
                     _mover.Move(Direction.Left, _movableActor);
                 }
+            }
+        }
 
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    _jumper.Jump(_jumpingActor);
-                    animator.SetBool("IsJumping", _jumpingActor.IsGrounded);
-                }
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _jumper.Jump(_jumpingActor);
+                animator.SetBool("IsJumping", _jumpingActor.IsGrounded);
             }
         }
     }

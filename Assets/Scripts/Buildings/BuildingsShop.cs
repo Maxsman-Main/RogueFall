@@ -1,4 +1,5 @@
 using Attack;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Buildings
@@ -7,6 +8,7 @@ namespace Buildings
     {
         [SerializeField] private PlayerBuildings _buildings;
         [SerializeField] private Cash _cash;
+        [SerializeField] private PlayerData _data;
         
         public bool BuyBuilding(int id)
         {
@@ -14,12 +16,11 @@ namespace Buildings
             {
                 _cash.ReduceCash((float)_buildings.Items[id].Price);
                 _buildings.Items[id].Upgrade();
+                _data.Items[id] += 1;
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
     }
 }
