@@ -10,7 +10,7 @@ namespace UI
         
         public void ChangeHealthView(float value)
         {
-            _view.text = "Здоровье: " + value.ToString(CultureInfo.InvariantCulture);
+            _view.text = "HP:" + value.ToString(CultureInfo.InvariantCulture);
         }
     }
 }

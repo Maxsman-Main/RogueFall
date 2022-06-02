@@ -8,17 +8,17 @@ namespace UI
     {
         [SerializeField] private int _buildingID;
         [SerializeField] private PlayerBuildings _buildings;
-        [SerializeField] private TMP_Text _price;
+        [SerializeField] private TextMeshProUGUI _price;
 
         private void Awake()
         {
+            _price.text = _buildings.Items[_buildingID].Price.ToString() + "c";
             _buildings.Items[_buildingID].OnUpgraded += UpdateBuildingInformation;
-            _price.text = ((int)(_buildings.Items[_buildingID].Price)).ToString() + "c";
         }
 
         private void UpdateBuildingInformation(Building building)
         {
-            _price.text = ((int)(_buildings.Items[_buildingID].Price)).ToString() + "c";
+            _price.text = _buildings.Items[_buildingID].Price.ToString() + "c";
         }
     }
 }

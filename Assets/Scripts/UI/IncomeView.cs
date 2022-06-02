@@ -22,7 +22,7 @@ namespace UI
 
         private void UpdateIncomeView(Building building)
         {
-            _incomeView.text = "Доход: " + _income.Value.ToString() + "c";
+            _incomeView.text = "PROFIT:" + _income.Value.ToString() + "c";
         }
     }
 }
