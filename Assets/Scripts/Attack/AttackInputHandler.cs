@@ -11,7 +11,7 @@ namespace Attack
         {
             if (GameState.State == PlayerState.InRun)
             {
-                if (Input.GetKeyDown(KeyCode.J))
+                if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))
                 {
                     _attackActor.Attack();
                 }

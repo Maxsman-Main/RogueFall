@@ -10,7 +10,7 @@ namespace UI
         
         public void ChangeCashView(float value)
         {
-            _view.text = "CASH:" + value.ToString(CultureInfo.InvariantCulture);
+            _view.text = "CASH:" + ((int)value).ToString(CultureInfo.InvariantCulture);
         }
     }
 }

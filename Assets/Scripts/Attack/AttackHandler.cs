@@ -8,6 +8,7 @@ namespace Attack
     {
         public async void GetDamage(float damage)
         {
+            DamagePopup.Create(gameObject.transform.position + new Vector3(0.5f, 0, 0), (int)damage);
             if (gameObject.GetComponent<SpriteRenderer>() != null)
             {
                 gameObject.GetComponent<SpriteRenderer>().color = Color.red;
@@ -21,7 +22,7 @@ namespace Attack
             }
             
             var health = gameObject.GetComponent<Health>();
-            health.GetDamage(damage);
+            health.GetDamage(damage); 
         }
     }
 }
