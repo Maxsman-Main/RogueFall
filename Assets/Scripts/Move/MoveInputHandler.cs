@@ -37,7 +37,7 @@ namespace Move
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift))
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) && GameState.State == PlayerState.InRun)
             {
                 _jumper.Jump(_jumpingActor);
                 animator.SetBool("IsJumping", _jumpingActor.IsGrounded);

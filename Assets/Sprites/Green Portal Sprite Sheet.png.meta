@@ -57,6 +57,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -376,6 +377,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Green Portal Sprite Sheet_3: 8165007364133127476
+      Green Portal Sprite Sheet_5: -4848553832261993613
+      Green Portal Sprite Sheet_15: 5996213593317683434
+      Green Portal Sprite Sheet_6: 1943393458402971858
+      Green Portal Sprite Sheet_0: -2719994208978545080
+      Green Portal Sprite Sheet_2: -2285153152877451226
+      Green Portal Sprite Sheet_4: -6852767344712249715
+      Green Portal Sprite Sheet_14: -3343418601671857258
+      Green Portal Sprite Sheet_1: 4394573487689358311
+      Green Portal Sprite Sheet_13: -5536896186241417835
+      Green Portal Sprite Sheet_7: 2502851955874185411
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

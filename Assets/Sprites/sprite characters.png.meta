@@ -288,6 +288,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -2191,6 +2192,94 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      sprite characters_42: 2534453318814242044
+      sprite characters_1: -3411946642401624053
+      sprite characters_47: -388070553660523187
+      sprite characters_71: 6506302132957384709
+      sprite characters_66: -7587147171068838195
+      sprite characters_78: 7026684517344806070
+      sprite characters_9: 5562263208700813557
+      sprite characters_74: -1772338805105585325
+      sprite characters_50: -6272070033633103591
+      sprite characters_56: 8614817486010411032
+      sprite characters_24: -5899136590284891288
+      sprite characters_48: -3944200256390428214
+      sprite characters_65: 5590548902191266558
+      sprite characters_10: 1069617693785327038
+      sprite characters_28: 1955943862686757432
+      sprite characters_16: -2095806975666621301
+      sprite characters_51: -4908830645549767273
+      sprite characters_67: 7956259395925290227
+      sprite characters_77: -9142526762057233103
+      sprite characters_43: 4288179594614700817
+      sprite characters_46: 6529224661596586471
+      sprite characters_82: -4036760100908671072
+      sprite characters_87: -3063529149834437356
+      sprite characters_7: 1222464107647936692
+      sprite characters_5: 4062605582232289507
+      sprite characters_0: 5128291797698292205
+      sprite characters_8: -8704982519727417424
+      sprite characters_33: -5456592110430633612
+      sprite characters_69: -5831080575857509295
+      sprite characters_12: 8320200358825123029
+      sprite characters_13: 2459391007965332507
+      sprite characters_53: -8560004006197592166
+      sprite characters_30: 6115724539884495960
+      sprite characters_72: -5858782912295847444
+      sprite characters_114: 4242704839618468827
+      sprite characters_73: -2993475556777257748
+      sprite characters_86: -6059252390265958926
+      sprite characters_64: 2128701795438759604
+      sprite characters_4: 6276421730833993758
+      sprite characters_75: -7300868962705311432
+      sprite characters_25: -1747221453742398698
+      sprite characters_112: 2483743454696410173
+      sprite characters_111: -7736344482130800984
+      sprite characters_29: -704536931251694650
+      sprite characters_85: -2384534226699910904
+      sprite characters_52: 1387401366169221498
+      sprite characters_14: 8254108610873408595
+      sprite characters_19: 6942023475343503173
+      sprite characters_15: 250426169028054156
+      sprite characters_76: -2956644927859407885
+      sprite characters_39: 1199861485327210387
+      sprite characters_116: -4439898268640502894
+      sprite characters_26: 432654153397097292
+      sprite characters_3: -725591850052572190
+      sprite characters_68: 3515896876828797580
+      sprite characters_2: 7095226703588419495
+      sprite characters_70: 8009492455277418454
+      sprite characters_18: 1467421883382516450
+      sprite characters_49: 4356518112722621308
+      sprite characters_44: -8762809514358407348
+      sprite characters_54: -6015088394123594290
+      sprite characters_115: -8669240525214008414
+      sprite characters_55: -4544757052315322171
+      sprite characters_38: 3837632132429678860
+      sprite characters_62: 7802349478243280358
+      sprite characters_35: -7476313314902940754
+      sprite characters_45: -3613217531910689422
+      sprite characters_81: -2560450429943590004
+      sprite characters_63: 8946366106792391088
+      sprite characters_11: -1777391053926105137
+      sprite characters_79: -6183726670909981623
+      sprite characters_36: 3870940001813090983
+      sprite characters_61: -3700938805634717989
+      sprite characters_6: -2325378364928245150
+      sprite characters_41: -1257700052394805277
+      sprite characters_60: 254842475603510563
+      sprite characters_31: 6770506205129612496
+      sprite characters_113: 4765248865642595340
+      sprite characters_57: -6869904443109213568
+      sprite characters_23: -8264904122066736484
+      sprite characters_58: 5937511897543731341
+      sprite characters_80: 890886823288246706
+      sprite characters_34: -4257021916659751032
+      sprite characters_37: 2974230470786548080
+      sprite characters_17: 148623720161274928
+      sprite characters_59: 2520919868831099309
+      sprite characters_40: 4260139891627103216
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
